@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link rel="shortcut icon" type="x-icon" href="./logoshort.png">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       .vertical-card {
+            width: 300px;
+             /* Set the height as needed */
+            margin: 20px;
+            border: none;
+            padding-top: 19px;
+            background-color: white;
+            
+            border-radius: 0px 20%;
+            
+            
+        }
+
+        .vertical-card:hover{
+          box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.6);
+          padding-top: 0px;
+        }
+
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .ff li:nth-child(-n+2)::before, .gg li:nth-child(-n+3)::before, .hh li:nth-child(-n+4)::before  {
+            content: '\2713'; /* Unicode character for checkmark */
+            color: #28a745; /* Success color */
+            margin-right: 8px; /* Adjust spacing between checkmark and text */
+            font: bold;
+        }
+        .footer a{
+            text-decoration: none;
+            color: rgb(87, 86, 86);
+        }
+        .footer h1{
+            font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+            font-style: oblique;
+            color: rgb(2, 110, 74);
+        }
+      
+        
+    </style>
+</head>
+<body >
+  <div class="container">
+    <h1 class="text-center pt-5" style="font-family: Snell Roundhand, cursive; font: bold;"><img src="./logoshort.png" alt="logo" height="100px" width="100px" data-aos="flip-right"> Principal Plans</h1>
+    <br><br>
+    
+    <p class="text-center">At AGRUL , our mission is to empower farmers and transform agriculture through sustainable practices, innovative solutions, and a commitment to environmental stewardship.</p>
+    
+  </div>
+  <div class="pb-4" style="background-color: antiquewhite;">
+  <div class="container-fluid mt-5 row" data-aos="fade-right">
+    <div class="col-sm-1"></div>
+    <div class="card vertical-card col-sm-3">
+      
+        <div class="card-body">
+            <h5 class="card-title pt-5 text-center">Minimal</h5>
+            <h1 class="card-title p-3 text-success text-center" style="font-family:URW Chancery L, cursive; font-style:oblique;font-size: 60px;">Free</h1>
+
+            <p class="card-text ">
+              <ul class="ff">
+                <li>1 Buffet table</li>
+                <li>CustomFarming rules</li>
+                <li>Real-time rate shopping</li>
+                <li>100 freight shipments / month</li>
+                
+            </ul>
+            </p>
+            <a href="#" class="btn btn-primary mx-auto d-block " data-bs-toggle="modal" data-bs-target="#imageContentModal">Learn More</a>
+        </div>
+        <div class="modal fade" id="imageContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Left 50% for Image -->
+              <div class="row">
+              
+              <!-- Right 50% for Content -->
+              <div class="modal-content col-sm-12" style="width: 100%; border: none;">
+                <div class="modal-header">
+                  <h4 class="modal-title text-success" id="exampleModalLabel" style="font-family: Bradley Hand, cursive;font-size: 60px;">Register Here</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                         
+                          <form>
+                            <div class="form-group">
+                              
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <br>
+                              
+                              <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <br>
+                              
+                              <input type="tel" class="form-control" id="contactNumber" name="contactNumber" placeholder="Contact Number" required>
+                            </div>
+                            <div class="form-group">
+                                <br>
+                              
+                                <input type="checkbox" id="plan1" name="plan1" value="Bike">
+                                <label for="plan1">Minimal Plan</label><br>
+                                <input type="checkbox" id="plan2" name="plan2" value="Car">
+                                <label for="plan2">Optimal Plan</label><br>
+                                <input type="checkbox" id="plan3" name="plan3" value="Boat">
+                                <label for="plan3">Premium Plan</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mx-auto d-block mt-3 ">Submit</button>
+                          </form>
+                        </div>
+                      </div>
+                </div>
+                
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="card vertical-card col-sm-3" style="background-color: black;color: white;border-radius: 0px 20%;">
+      
+      <div class="card-body">
+          <h5 class="card-title pt-5 text-center"><mark style="border-radius: 0px 30%;"> Optimal</mark></h5>
+          <h1 class="card-title p-3 text-success text-center" style="font-family:Brush Script MT, Brush Script Std, cursive; font-style:oblique;font-size: 60px;">$35/month</h1>
+
+          <p class="card-text ">
+            <ul class="gg">
+              <li >5 warehouse</li>
+              <li >CustomFarming rules</li>
+              <li >Real-time rate shopping</li>
+              <li>100 freight shipments / month</li>
+              
+          </ul>
+          </p>
+          <a href="#" class="btn btn-primary mx-auto d-block" data-bs-toggle="modal" data-bs-target="#imageContentModal">Learn More</a>
+      </div>
+  </div>
+  <div class="col-sm-1"></div>
+  <div class="card vertical-card col-sm-3">
+      
+    <div class="card-body">
+        <h5 class="card-title pt-5 text-center">Premium</h5>
+        <h1 class="card-title p-3 text-success text-center" style="font-family:Brush Script MT, Brush Script Std, cursive; font-style:oblique;font-size: 60px;">$75/month</h1>
+
+        <p class="card-text">
+          <ul class="hh">
+            <li >5 warehouse</li>
+            <li >CustomFarming rules</li>
+            <li >Real-time rate shopping</li>
+            <li >100 freight shipments / month</li>
+            
+        </ul>
+        </p>
+        <a href="#" class="btn btn-primary mx-auto d-block" data-bs-toggle="modal" data-bs-target="#imageContentModal">Learn More</a>
+    </div>
+  </div>
+</div>
+</div>
+  
+<div style="background-color: rgb(228, 226, 226);">
+  <div class="container p-5 pb-0 " >
+      <div class=" footer row ">
+          <div class="col-sm-4">
+              <img src="./logo.png" alt="Agrul logo" width="100%">
+              <p>We give our customers the best value through excellent services with the cutting-edge technologies and low cost at any and every time.</p>
+          </div>
+          <div class="col-sm-2  ">
+            <br>
+              <h1><b>Links</b></h1>
+              
+                  <br> <br>
+                  <dd><i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="index.html">Home</a></li>
+                  <dd><i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="about.html">About us</a></dd>
+                    <dd><i class="fa fa-angle-right" aria-hidden="true"></i>
+                      <a href="teammembers.html">Team Details</a></dd>
+                  <dd><i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="rental.html">Agriculture Machinery</a></dd>
+                  
+                  <dd><i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="principal.html">Packages</a></dd>
+                  <dd><i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="FAQ.html">F.A.Q.</a></dd>
+                  <dd><i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="contact.html">Contact us</a></dd>
+                
+          </div>
+          <div class="col-sm-3">
+              <h1 class="pt-3"><b>Main Skills</b></h1><br>
+              <br>
+              <dl style="list-style-type: circle black">
+              <dd><i class="fa fa-angle-right pt-2" aria-hidden="true"></i><a style="color: rgb(87, 86, 86);text-decoration: none;" href="#Website_Development">Event Planning</a></dd><br>
+              <dd><i class="fa fa-angle-right" aria-hidden="true"></i><a style="color: rgb(87, 86, 86);text-decoration: none;" href="#Application_Development">Presenting ideas and copy to clients</a></dd><br>
+              <dd><i class="fa fa-angle-right" aria-hidden="true"></i><a style="color: rgb(87, 86, 86);text-decoration: none;" href="#Customized_Software_Development">Influencer Marketing</a></dd><br>
+              <dd><i class="fa fa-angle-right" aria-hidden="true"></i><a style="color: rgb(87, 86, 86);text-decoration: none;" href="#Learning&Training">Email Marketing, Design & Dev</a></dd><br>
+              <dd><i class="fa fa-angle-right" aria-hidden="true"></i><a style="color: rgb(87, 86, 86);text-decoration: none;" href="#Digital_Marketing">Strong communication skills</a></dd><br>
+              <dd><i class="fa fa-angle-right" aria-hidden="true"></i><a style="color: rgb(87, 86, 86);text-decoration: none;" href="#DataAnalytics&Science">Sales/Marketing Strategy</a></dd><br>
+              </dl>
+          </div>
+          <div class="col-sm-3">
+              <h1 class="pt-3"><b>Contacts US</b></h1>
+              <br><br>
+        <p style="color: rgb(87, 86, 86);">
+            <i style='font-size:20px;color: black;' class='fas'>&#xf3c5;</i> 123 Harvest Lane Agroville,<br> AgriLand 56789 Country Fields
+        </p>
+        <p style="color: rgb(87, 86, 86);">
+            <i style='font-size:24px;color: black;' class='fas'>&#xf2b6;</i>  sarah_w@email.com
+        </p>
+        <p style="color: rgb(87, 86, 86);">
+            <i style='font-size:24px;color: black;' class='fas'>&#xf095;</i> +01 222 4321 765
+        </p>
+          </div>
+        
+      
+      </div>
+      
+      </div>
+
+  </div>
+
+    <script>
+        AOS.init({
+            offset:120,
+            duration:2000,
+        });
+      </script>
+</body>
+</html>

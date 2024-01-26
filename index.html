@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="./logoshort.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css" integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Agriculture demo</title>
+    <style>
+        .fa-heart:hover {
+            color: rgb(242, 14, 14);
+        }
+
+        .fa-cart-shopping:hover {
+            color: rgb(132, 245, 71);
+        }
+
+        .room {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #video-background {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height:  100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #overlay {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding-top: 200px;
+        }
+
+        
+
+        .carousel-item a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .hover-with-dot {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hover-with-dot::before {
+            content: "\2022"; /* Unicode character for a bullet point */
+            position: absolute;
+            left: 8px; /* Adjust the distance from the element */
+            opacity: 0; /* Initially make it transparent */
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-with-dot:hover::before {
+            opacity: 1; /* Make it visible on hover */
+        }
+        
+        
+        
+        
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./logo.png" alt="Agriculture logo" height="70px" width="150px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link text-light h5" style="text-decoration: none; margin-left: 10px;font-weight: bold;" href="index.html">Home</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link text-light h5" style="text-decoration: none; margin-left: 10px;font-weight: bold;" href="about.html">About</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link text-light h5" style="text-decoration: none; margin-left: 10px;font-weight: bold;" href="teammembers.html">Team Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light h5" style="text-decoration: none; margin-left: 10px;font-weight: bold;" href="rental.html">Agriculture Machinery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light h5" style="text-decoration: none; margin-left: 10px;font-weight: bold;" href="principal.html">Packages</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light h5" style="text-decoration: none; margin-left: 10px;font-weight: bold;" href="FAQ.html">F.A.Q.</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light h5" style="text-decoration: none; margin-left: 10px;font-weight: bold;" href="contact.html">Contact us</a>
+            </li>
+               
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+
+    <div class="room">
+        <video id="video-background" autoplay muted loop>
+            <source src="Video Banner Stock Videos - Rural, Farming, Agriculture, Nature.mp4" type="video/mp4">
+        </video>
+
+        <div id="overlay"></div>
+
+        
+        <div class="content ">
+            <div id="demo" class="carousel slide  " data-bs-ride="carousel">
+
+              <div class="carousel-inner">
+                <div class="carousel-item active h1">
+                  <div data-aos="fade-down">AGRICULTURE <br><br><br>
+                      <div data-aos="fade-up"><a href="discoverme1.html" class="btn btn-success">Discover More</a></div>
+                  </div>
+                </div>
+                <div class="carousel-item h1">
+                  <div data-aos="fade-down">FARMING TOOLS & Methods<br><br><br>
+                      <div data-aos="fade-up"><a href="discoverme2.html" class="btn btn-success">Discover More</a></div>
+                  </div>
+                </div>
+                <div class="carousel-item h1">
+                  <div data-aos="fade-down">IRRIGATION</div> <br><br> 
+                  <div data-aos="fade-up"><a href="discoverme3.html" class="btn btn-success ">Discover More</a></div>
+                  
+                </div>
+              </div>
+              
+              
+              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset:120,
+            duration:2000,
+        });
+      </script>
+</body>
+
+</html>
